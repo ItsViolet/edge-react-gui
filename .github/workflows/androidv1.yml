@@ -1,0 +1,35 @@
+name: Build Edge Wallet Android (gradlew-1)
+
+on:
+  push:
+    branches:
+      - main
+      - master
+      - develop
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '18.2'
+
+    - name: Set up Android SDK
+      uses: android-actions/setup-android@v2
+      with:
+        sdk-version: '30.0.3'
+
+    - name: Build Android app with Gradle Wrapper
+      run: ./gradlew build
+
+    - name: Archive APK
+      uses: actions/upload-artifact@v2
+      with:
+        name: app-debug
+        path: app/build/outputs/apk/debug/app-debug.apk
