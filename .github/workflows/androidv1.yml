@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - main
-      - master
       - develop
+      - master
 
 jobs:
   build:
@@ -24,6 +24,9 @@ jobs:
       uses: android-actions/setup-android@v2
       with:
         sdk-version: '30.0.3'
+
+    - name: Change directory to android
+      run: cd android
 
     - name: Build Android app with Gradle Wrapper
       run: ./gradlew build
