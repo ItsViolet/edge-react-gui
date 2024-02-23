@@ -28,6 +28,7 @@ jobs:
     - name: Change directory to android and Build Android app with Gradle Wrapper
       run: |
         cd android
+        npx yarn install
         ./gradlew build
 
     - name: Archive APK
