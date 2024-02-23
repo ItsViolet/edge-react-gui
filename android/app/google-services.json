@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "844148385672",
+    "project_id": "ekai-smartwallet",
+    "storage_bucket": "ekai-smartwallet.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:844148385672:android:f9d7e2d5e43d5d6abf3c3d",
+        "android_client_info": {
+          "package_name": "co.edgesecure.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIVUfXCD8cS9Epqq7q9lqA8Pvg_UKC2LI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
