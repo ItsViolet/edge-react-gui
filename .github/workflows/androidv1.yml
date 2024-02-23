@@ -15,10 +15,14 @@ jobs:
     - name: Check out code
       uses: actions/checkout@v2
 
-    - name: Set up Node.js and Android SDK
-      uses: android-actions/setup-android@v2
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
       with:
         node-version: '18.2'
+
+    - name: Set up Android SDK
+      uses: android-actions/setup-android@v2
+      with:
         sdk-version: '30.0.3'
 
     - name: Change directory to android and Build Android app with Gradle Wrapper
